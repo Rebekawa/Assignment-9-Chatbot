@@ -49,10 +49,14 @@ def principal(input):
         return 'nice to meet you'
     elif any(x in input.lower() for x in feelings_quest):
         return feeling_ans()
-    elif any(x in input.lower() for x in good_or_bad):
-        return new_quest()
     elif any(x in input for x in emotion):
         return emotions(input)
+    elif 'movie'.lower() in input:
+        return new_quest()
+    elif 'movies'.lower() in input:
+        return new_quest()
+    elif any(x in input.lower() for x in good_or_bad):
+        return new_quest()
     elif 'comedy'.lower() in input:
         return comedy()
     elif 'adventure'.lower() in input:
@@ -147,32 +151,39 @@ def make_a_joke():
 
 
 def comedy():
-   list = ['The grinch', 'Love actually', 'Green Book']
-   return random.choice(list)
+    list = ['The grinch', 'Love actually', 'Green Book']
+    return "you should watch {0}".format(random.choice(list))
+
 
 def adventure():
     list = ['Captain Marvel', 'Aquaman', 'Avengers']
-    return random.choice(list)
+    return "you should watch {0}".format(random.choice(list))
+
 
 def action():
     list = ['Vikings', 'Jack Ryan', 'BayWatch']
-    return random.choice(list)
+    return "you should watch {0}".format(random.choice(list))
+
 
 def documentary():
     list = ['McQueen', 'The Gymkhana Files', 'Forensic Files']
-    return random.choice(list)
+    return "you should watch {0}".format(random.choice(list))
+
 
 def history():
     list = ['The Last Kingdom', 'The Crown ', 'Poldark']
-    return random.choice(list)
+    return "you should watch {0}".format(random.choice(list))
+
 
 def horror():
     list = ['The Walking Dead', 'The Circle ', 'Nightflyers']
-    return random.choice(list)
+    return "you should watch {0}".format(random.choice(list))
+
 
 def musical():
     list = ['The Greatest Showman' , 'Dumplin', 'High School Musical']
-    return random.choice(list)
+    return "you should watch {0}".format(random.choice(list))
+
 
 def weather():
     r = requests.get(
