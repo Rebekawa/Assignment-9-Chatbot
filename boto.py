@@ -199,7 +199,8 @@ def weather():
 
 
 def question():
-    return "I don't understand your question"
+    answers = ["I'm not able to answer I'm just a Robot", "I don't understand your question", "Euuuuuh... I don't know"]
+    return random.choice(answers)
 
 
 def hello(name):
